@@ -8,12 +8,12 @@ Go to the Chicago data portal at [https://data.cityofchicago.org/](https://data.
 ![](SUHI_session1_data_portal.png)
 
 #### Step 2
-Sign-up for a free RStudio Cloud account at https://rstudio.cloud/
+Sign-up for a free RStudio Cloud account at [https://rstudio.cloud/](https://rstudio.cloud/)
 
 ![](SUHI_session1_Rstudio_cloud.png)
 
 #### Step 3
-In Rstudio Cloud create a New Project
+In Rstudio Cloud create a ```New Project```
 
 ![](SUHI_session1_Rstudio_new_project.png)
 
