@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+# Welcome GIS in R, a series of trainings 
 
 You can use the [editor on GitHub](https://github.com/christopher-l-ahmed/R-GIS/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
