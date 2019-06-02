@@ -2,19 +2,23 @@
 
 # GIS in R: Session 1
 
-#### Step 1 - Go to the Chicago data portal at https://data.cityofchicago.org/. Search for "community areas" and click on "Boundaries - Community Areas (current)". Then export the geospatial data file as a shapefile.
+#### Step 1
+Go to the Chicago data portal at https://data.cityofchicago.org/. Search for "community areas" and click on "Boundaries - Community Areas (current)". Then export the geospatial data file as a shapefile.
 
 ![](SUHI_session1_data_portal.png)
 
-#### Step 2 - Sign-up for a free RStudio Cloud account at https://rstudio.cloud/
+#### Step 2
+Sign-up for a free RStudio Cloud account at https://rstudio.cloud/
 
 ![](SUHI_session1_Rstudio_cloud.png)
 
-#### Step 3 - In Rstudio Cloud create a New Project
+#### Step 3
+In Rstudio Cloud create a New Project
 
 ![](SUHI_session1_Rstudio_new_project.png)
 
-#### Step 4 - AddIn a  Chicago Community Areas shapefile by searching for Chicago CCA's 
+#### Step 4
+AddIn a  Chicago Community Areas shapefile by searching for Chicago CCA's 
 
 
 
