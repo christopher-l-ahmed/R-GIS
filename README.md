@@ -5,6 +5,9 @@
 1. Sign-up for a free RStudio Cloud account at https://rstudio.cloud/
 ![](SUHI_session1_Rstudio_cloud.png)
 
+2. In Rstudio Cloud create a New Project
+
+
 ....image of final project = CCA
 You can use the [editor on GitHub](https://github.com/christopher-l-ahmed/R-GIS/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
