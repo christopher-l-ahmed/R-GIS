@@ -3,7 +3,7 @@
 # GIS in R: Session 1
 
 #### Step 1
-Go to the Chicago data portal at https://data.cityofchicago.org/. Search for "community areas" and click on "Boundaries - Community Areas (current)". Then export the geospatial data file as a shapefile.
+Go to the Chicago data portal at [https://data.cityofchicago.org/](https://data.cityofchicago.org/). Search for ```"community areas"``` and click on "Boundaries - Community Areas (current)". Then export the geospatial data file as a shapefile.
 
 ![](SUHI_session1_data_portal.png)
 
