@@ -13,12 +13,12 @@ Sign-up for a free RStudio Cloud account at [https://rstudio.cloud/](https://rst
 ![](SUHI_session1_Rstudio_cloud.png)
 
 #### Step 3
-In Rstudio Cloud create a ```New Project```
+In Rstudio Cloud create a ```New Project```. Click on the project title to rename it as ```GIS_Session_1``` and start a new ```R Script``` by clicking the ```Plus``` arrow on the top left of the screen. At this point let's save our new script. Click ```File - Save As```. Save it as ```my_first_script.R```. A ```.R``` file is a R script file.
 
 ![](SUHI_session1_Rstudio_new_project.png)
 
 #### Step 4
-AddIn a  Chicago Community Areas shapefile by searching for Chicago CCA's 
+R is an open source coding software with a lot of pre-built librarys of code. We can freely use these librarys but we have to instal them first. 
 
 
 
