@@ -6,9 +6,13 @@
 ![](SUHI_session1_Rstudio_cloud.png)
 
 
+
+
 #### Step 2 - In Rstudio Cloud create a New Project
 
 ![](SUHI_session1_Rstudio_new_project.png)
+
+
 
 
 ....image of final project = CCA
