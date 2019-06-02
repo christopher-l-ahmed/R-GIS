@@ -2,6 +2,9 @@
 
 # GIS in R: Session 1
 
+1. Sign-up for a free RStudio Cloud account
+
+....image of final project = CCA
 You can use the [editor on GitHub](https://github.com/christopher-l-ahmed/R-GIS/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
