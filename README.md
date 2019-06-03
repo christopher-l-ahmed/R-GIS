@@ -59,3 +59,4 @@ ggplot() +
                      
  ggsave("CCA.png")
  ```
+![](SUHI_session1_final_map.png)
