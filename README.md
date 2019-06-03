@@ -19,7 +19,7 @@ In Rstudio Cloud create a ```New Project```. Click on the project title to renam
 ![](SUHI_session1_new_script.png)
 
 #### Step 4
-R is an open source coding software with a lot of pre-built librarys of code. We can freely use these librarys but we have to install them. We will be using several librayrs today. Type the code below in your R-script, after each line of code click ```ctrl enter``` to run the code.
+R is an open source coding software with a lot of pre-built libraries of code. We can freely use these libraries but we have to install them. We will be using several librayrs today. Type the code below in your R-script, after each line of code click ```ctrl enter``` to run the code.
 ```
 install.packages("sf")
 install.packages("raster")
