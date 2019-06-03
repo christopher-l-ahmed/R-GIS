@@ -34,7 +34,7 @@ library(gglplot2)
 #### Step 5
 Next, add the Chicago Community Area shapefile we downloaded earlier into your Rstudio folder. Click upload, and select the downloaded shapefie.
 
-!
+![]()
 
 #### Step 6
 Use the code below to read-in the shapefile and to review the shapefile's meta data.
