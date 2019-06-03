@@ -3,7 +3,7 @@
 # GIS in R: Session 1
 
 #### Step 1
-Go to the Chicago data portal at [https://data.cityofchicago.org/](https://data.cityofchicago.org/). Search for ```community areas``` and click on ```Boundaries - Community Areas (current)```. Then export the geospatial data file as a ```shapefile```.
+Go to the Chicago data portal at [https://data.cityofchicago.org/](https://data.cityofchicago.org/). Search for ```community areas``` and click on ```Boundaries - Community Areas (current)```. Then export the geospatial data file as a ```shapefile```. Note: we want to keep this downloaded file zipped, some mac users may have to open this downloaded foler (which contains serveral files), highlight them all and compress/zip them.
 
 ![](SUHI_session1_data_portal.png)
 
@@ -19,7 +19,7 @@ In Rstudio Cloud create a ```New Project```. Click on the project title to renam
 ![](SUHI_session1_new_script.png)
 
 #### Step 4
-R is an open source coding software with a lot of pre-built libraries of code. We can freely use these libraries but we have to install them. We will be using several librayrs today. Type the code below in your R-script, after each line of code click ```ctrl enter``` to run the code.
+R is an open source coding software with a lot of pre-built libraries of code. We can freely use these libraries but we have to install and load them first. Type the code below in your R-script, the first three lines are used to install the libraries, the next four lines of code are used to load libraries. After you copied and pasted this code, highlight the first three lines of code and click ```run``` or ```ctrl enter``` to execute the code.
 ```
 install.packages("sf")
 install.packages("raster")
@@ -28,24 +28,25 @@ install.packages("ggplot2")
 library(sf)
 library(sp)
 library(raster)
-library(gglplot2)
+library(ggplot2)
 ```
 
 #### Step 5
-Next, add the Chicago Community Area shapefile we downloaded earlier into your Rstudio folder. Click upload, and select the downloaded shapefie.
+Next, add the zipped Chicago Community Area shapefile we downloaded earlier into your Rstudio folder. Click upload, and select the downloaded shapefie. The contents of the zipped folder will now apear in your Rstudio folder location and will show up as four seperate files.
 
 ![](SUHI_session1_upload.png)
 
 #### Step 6
-Use the code below to read-in the shapefile and to review the shapefile's meta data.
+Use the code below to read-in the shapefile. Note: if the code below does not work, it is probably becuase the name of your shapefile is different than mine. Make sure to type the name of your shapefile. After you load in the data you can review the shapefile's meta data to see what ```projection``` our shapefile is in using the second line of code below. We will talk more about ```projections``` in a later session.
 
 ```
 Chicago_CCA <- st_read("/cloud/project/geo_export_8234332b-d045-40c0-9022-795cc89c5f1e.shp")
+
 st_crs(Chicago_CCA)
 ```
 
 #### Step 7
-Finally, visualize the map using the following code and export it as a ```.png``` file. You should have create a map that looks like the image below.
+Finally, let's create a map of the Chicago Community Areas using the code below. The last line of code saves our map as a ```.png``` in our Rstudio folder. You can play around with the ggplot code and change the ```size``` of the borders from 0.2 to say 2, and the colors. As you play around with this code and try to make sense of it you will begin to appreciate how you can customize your map using R code. The result of this code is the map image below.
 ```
 plot(Chicago_CCA)
 
