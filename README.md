@@ -19,51 +19,25 @@ In Rstudio Cloud create a ```New Project```. Click on the project title to renam
 ![](SUHI_session1_new_script.png)
 
 #### Step 4
-R is an open source coding software with a lot of pre-built librarys of code. We can freely use these librarys but we have to install them. We will be using three librayrs today. Type the code below in your R-script to load these librarys. 
+R is an open source coding software with a lot of pre-built librarys of code. We can freely use these librarys but we have to install them. We will be using several librayrs today. Type the code below in your R-script, after each line of code click ```ctrl enter``` to run the code.
 ```
 install.packages("sf")
 install.packages("raster")
 install.packages("ggplot2")
 
 library(sf)
+library(sp)
 library(raster)
 library(gglplot2)
 ```
 
+#### Step 5
+Next, add the Chicago Community Area shapefile we downloaded earlier into your Rstudio folder. Click upload, and select the downloaded shapefie.
 
-....image of final project = CCA
-You can use the [editor on GitHub](https://github.com/christopher-l-ahmed/R-GIS/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+#### Step 6
+Use the code below to read-in the shapefile and to review the shapefile's meta data.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/christopher-l-ahmed/R-GIS/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### Step 7
+Finally, visualize the map using the following code and export it as a ```.png``` file.
