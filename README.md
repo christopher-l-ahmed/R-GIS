@@ -34,10 +34,28 @@ library(gglplot2)
 #### Step 5
 Next, add the Chicago Community Area shapefile we downloaded earlier into your Rstudio folder. Click upload, and select the downloaded shapefie.
 
-![]()
+![](SUHI_session1_upload.png)
 
 #### Step 6
 Use the code below to read-in the shapefile and to review the shapefile's meta data.
 
+```
+Chicago_CCA <- st_read("/cloud/project/geo_export_8234332b-d045-40c0-9022-795cc89c5f1e.shp")
+st_crs(Chicago_CCA)
+```
+
 #### Step 7
-Finally, visualize the map using the following code and export it as a ```.png``` file.
+Finally, visualize the map using the following code and export it as a ```.png``` file. You should have create a map that looks like the image below.
+```
+plot(Chicago_CCA)
+
+ggplot() +
+  geom_sf(data = Chicago_CCA, size = 0.2, color = "grey", fill = "cornsilk") +
+  coord_sf() + theme(panel.background = element_blank(),
+                     axis.text.x=element_blank(),
+                     axis.ticks.x=element_blank(),
+                     axis.text.y=element_blank(),
+                     axis.ticks.y=element_blank())
+                     
+ ggsave("CCA.png")
+ ```
