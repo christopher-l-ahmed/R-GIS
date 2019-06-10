@@ -123,8 +123,7 @@ ggplot(data = Merged_Life) +
                      axis.ticks.y=element_blank())
  ggsave("CCA_life.png")
  ```
- 
- ![](SUHI_session2_4_final_map.png)
+ ![](SUHI_session2_4_map.png)
  
 # GIS in R: Session 3 (colors, labels, borders, titles, legends)
 
