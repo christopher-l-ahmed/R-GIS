@@ -1,6 +1,6 @@
 ![](SUHI_9session_overview.png)
 
-# GIS in R: Session 1
+# GIS in R: Session 1 (creating a map of Chicago's Community Areas)
 
 #### Step 1
 Go to the Chicago data portal at [https://data.cityofchicago.org/](https://data.cityofchicago.org/). Search for ```community areas``` and click on ```Boundaries - Community Areas (current)```. Then export the geospatial data file as a ```shapefile```.
@@ -63,12 +63,18 @@ ggplot() +
  ```
 ![](SUHI_session1_final_map.png)
 
-# GIS in R: Session 2
-## Chicago Health Atlas data to GIS Map in R
+# GIS in R: Session 2 (Creating a map of life expectancy by Chicago Community Areas)
 Session 2 builds off session 1 in that it requires we have already added our Chicago Community Area (CCA) shapefile (review session 1). In session 2, we will download and clean life expectancy data from the Chicago Health Atals and merge this data with our shapefile so it can be spatially visualized.
 
 #### Step 1
 Go to the Chicago Health Atlas at [https://www.chicagohealthatlas.org/](https://www.chicagohealthatlas.org/). Click ```view all indicators``` 
+
+![](SUHI_session2_1_health_atlas.png)
+
+#### Step 2
+Click the ```life expectancy``` indicator and then click to download the data.
+
+![](SUHI_session2_2_download_life_exp.png)
 
 
 #### Step 1
