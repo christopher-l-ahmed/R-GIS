@@ -38,7 +38,7 @@ Next, add the zipped Chicago Community Area shapefile we downloaded earlier into
 ![](SUHI_session1_upload.png)
 
 #### Step 6
-Use the code below to read-in the shapefile. Note: if the code below does not work, it is probably becuase the name of your shapefile is different than mine. Make sure to type the name of your shapefile. After you load in the data you can review the shapefile's meta data to see what ```projection``` our shapefile is in using the second line of code below. We will talk more about ```projections``` in a later session.
+Use the code below to read-in the shapefile. Note: if the code below does not work, it is probably becuase the name of your shapefile you uploaded is different than mine. Make sure to type the name of your shapefile. After you load in the data you can review the shapefile's meta data to see what ```projection``` our shapefile is in using the second line of code below. We will talk more about ```projections``` in a later session.
 
 ```
 Chicago_CCA <- st_read("/cloud/project/geo_export_8234332b-d045-40c0-9022-795cc89c5f1e.shp")
@@ -87,6 +87,23 @@ I achieved this by clicking ```Data``` and turning on ```Filters```. I then sele
 Log-in to your free RStudio Cloud account at [https://rstudio.cloud/](https://rstudio.cloud/) and open up our project from session 1; if you followed my instructions this project will be called ```GIS_Session1```.
 
 #### Step 5
+Next, upload the clean life expectancy data you made into your Rstudio folder.
+
+![](SUHI_session1_upload.png)
+
+#### Step 6
+Use the code below to read in the life expectancy data frame and view its contents.
+```
+Chicago_CCA <- st_read("/cloud/project/geo_export_8234332b-d045-40c0-9022-795cc89c5f1e.shp")
+
+st_crs(Chicago_CCA)
+```
+
+#### Step 7
+Use the code below to join our life expectancy data frame with our previously brought in Chicago Community Areas shapefile. Here we are joining on the common column CCA number.
+
+#### Step 8
+To create a simple cholopleth map we need to assign color values that match up with an attribute/variable/column value. The code below allows you to do this, using a gradient of blue and a quintile ```binning``` operation. The result of this code is the map below!
 
 # GIS in R: Session 3
 ## Creating our first GIS Shinny App!
