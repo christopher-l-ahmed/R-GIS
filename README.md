@@ -76,6 +76,11 @@ Click the ```life expectancy``` indicator and then click to download the data.
 
 ![](SUHI_session2_2_download_life_exp.png)
 
+#### Step 3
+Open up the data in Excel; click ```enable editing``` if this pop-up appears. Now clean the data so we only have rows for the year 2017, and for Community areas (there should be 77 rows of data with 1 row of headers). Also, delete columns so all that remain are: ```Year```, ```Geography```, ```Geo_group```, and ```Number```. 
+
+I achieved this by clicking ```Data``` and turning on ```Filters```. I then selected to only show the year 2017 and the ```Geo_Group``` "Community Area". I then selected all the visable data, copied it, and pasted it into a new sheet. I then highlighted all the columns of data I did not need, and right clicked these columns to delete (see image below).
+
 
 #### Step 1
 Log-in to your free RStudio Cloud account at [https://rstudio.cloud/](https://rstudio.cloud/) and open up our project from session 1; if you followed my instructions this project will be called ```GIS_Session1```.
