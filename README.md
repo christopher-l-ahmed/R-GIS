@@ -121,8 +121,10 @@ ggplot(data = Merged_Life) +
                      axis.ticks.x=element_blank(),
                      axis.text.y=element_blank(),
                      axis.ticks.y=element_blank())
+ ggsave("CCA_life.png")
  ```
-                     
+ ![](SUHI_session2_4_final_map.png)
+ 
 # GIS in R: Session 3 (colors, labels, borders, titles, legends)
 
 # GIS in R: Session 4 (creating our first GIS Shinny App)
