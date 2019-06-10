@@ -62,3 +62,19 @@ ggplot() +
  ggsave("CCA.png")
  ```
 ![](SUHI_session1_final_map.png)
+
+# GIS in R: Session 2
+## Chicago Health Atlas data to GIS Map in R
+Session 2 builds off session 1 in that it requires we have already added our Chicago Community Area (CCA) shapefile (review session 1). In session 2, we will download and clean life expectancy data from the Chicago Health Atals and merge this data with our shapefile so it can be spatially visualized.
+
+#### Step 1
+Go to the Chicago Health Atlas at [https://www.chicagohealthatlas.org/](https://www.chicagohealthatlas.org/). Click ```view all indicators``` 
+
+
+#### Step 1
+Log-in to your free RStudio Cloud account at [https://rstudio.cloud/](https://rstudio.cloud/) and open up our project from session 1; if you followed my instructions this project will be called ```GIS_Session1```.
+
+#### Step 2
+
+# GIS in R: Session 3
+## Creating our first GIS Shinny App!
