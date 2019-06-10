@@ -79,12 +79,12 @@ Click the ```life expectancy``` indicator and then click to download the data.
 #### Step 3
 Open up the data in Excel; click ```enable editing``` if this pop-up appears. Now clean the data so we only have rows for the year 2017, and for Community areas (there should be 77 rows of data with 1 row of headers). Also, delete columns so all that remain are: ```Year```, ```Geography```, ```Geo_group```, and ```Number```. Save your cleaned data as a ```.csv``` file.
 
-I achieved this by clicking ```Data``` and turning on ```Filters```. I then selected to only show the year 2017 and the ```Geo_Group``` "Community Area". I then selected all the visable data, copied it, and pasted it into a new sheet. I then highlighted all the columns of data I did not need, right clicked these columns, and clicked to delete (see image below).
+I achieved this by clicking ```Data``` and turning on ```Filters```. I then selected to only show the year 2017 and the ```Geo_Group``` type Community Area. I then selected the visable data, copied it, and pasted it into a new sheet. I highlighted columns I did not need, right clicked, and deleted the non-needed data (see image below).
 
 ![](SUHI_session2_3_clean_data.png)
 
 #### Step 4
-Log-in to your free RStudio Cloud account at [https://rstudio.cloud/](https://rstudio.cloud/) and open up our project from session 1; if you followed my instructions this project will be called ```GIS_Session1```.
+Log-in to your free RStudio Cloud account at [https://rstudio.cloud/](https://rstudio.cloud/) and open up our project from session 1; if you named your project the same as I did in session 1 your project will be called ```GIS_Session1```.
 
 #### Step 5
 Next, upload the clean life expectancy data you made into your Rstudio folder.
@@ -97,13 +97,13 @@ Use the code below to read in the life expectancy data frame and view its conten
 Chicago_Life <- read.csv("CCA_life_data.csv", header = TRUE)
 View(Chicago_Life)
 ```
-In order to join our life expectancy data with our Chicago Community Areas shapefile we need a common column of data. Use the code below to identify a common column.
+In order to join our life expectancy data with our Chicago Community Areas shapefile we need to identify a column in each data frame that is common. Use the code below to open up the CCA data and look for a common column between it and the life expectancy data frame.
 ```
 View(Chicago_CCA)
 ```
 
 #### Step 7
-It looks like the ```area_numbe``` variable from the shapefile and the variable ```Geo_ID``` from our life expectancy data are what we should join these data frames by. Use the code below to make the join and check to newly joined data table.
+It looks like the ```area_numbe``` column/variable from the shapefile and the column/variable ```Geo_ID``` from our life expectancy data are a match! Use the code below to make the join and check your work (by viewing the new data table to see if things look right).
 
 ```
 Merged_Life <- merge(Chicago_CCA, Chicago_Life, by.x="area_numbe", by.y="Geo_ID")
@@ -111,7 +111,7 @@ View(Merged_Life)
 ```
 
 #### Step 8
-To create our first cholopleth map we need to assign color values that match up with an attribute/variable/column value. The code below allows you to do this by using the ```aes(fill=__)``` function. The rest of the code is borrowed from the code we used in session 1 to make a map of CCA's.
+To create our first cholopleth map we need to assign color values that match up with an attribute/variable/column value. The code below allows you to do this by using the ```aes(fill=__)``` function. The rest of the code is borrowed from the code we used in session 1 to make a map of CCA's. The last line of code saves the image as a png. We just created our first choropleth map showing 2017 life expectancy by Chicago Community Area!
 
 ```
 ggplot(data = Merged_Life) +
