@@ -96,23 +96,33 @@ Use the code below to read in the life expectancy data frame and view its conten
 ```
 Chicago_Life <- read.csv("CCA_life_data.csv", header = TRUE)
 View(Chicago_Life)
-
 ```
 In order to join our life expectancy data with our Chicago Community Areas shapefile we need a common column of data. Use the code below to identify a common column.
 ```
 View(Chicago_CCA)
-
 ```
 
 #### Step 7
-It looks like the ```area_numbe``` variable from the shapefile and the variable ```Geo_ID``` from our life expectancy data are what we should join these data frames by. Use the code below to make the join.
+It looks like the ```area_numbe``` variable from the shapefile and the variable ```Geo_ID``` from our life expectancy data are what we should join these data frames by. Use the code below to make the join and check to newly joined data table.
 
 ```
-
+Merged_Life <- merge(Chicago_CCA, Chicago_Life, by.x="area_numbe", by.y="Geo_ID")
+View(Merged_Life)
 ```
 
 #### Step 8
-To create a simple cholopleth map we need to assign color values that match up with an attribute/variable/column value. The code below allows you to do this, using a gradient of blue and a quintile ```binning``` operation. The result of this code is the map below!
+To create our first cholopleth map we need to assign color values that match up with an attribute/variable/column value. The code below allows you to do this by using the ```aes(fill=__)``` function. The rest of the code is borrowed from the code we used in session 1 to make a map of CCA's.
 
-# GIS in R: Session 3
-## Creating our first GIS Shinny App!
+```
+ggplot(data = Merged_Life) +
+  geom_sf(aes(fill = Number), size = 0.2, color = "white") +
+  coord_sf() + theme(panel.background = element_blank(),
+                     axis.text.x=element_blank(),
+                     axis.ticks.x=element_blank(),
+                     axis.text.y=element_blank(),
+                     axis.ticks.y=element_blank())
+ ```
+                     
+# GIS in R: Session 3 (colors, labels, borders, titles, legends)
+
+# GIS in R: Session 4 (creating our first GIS Shinny App)
