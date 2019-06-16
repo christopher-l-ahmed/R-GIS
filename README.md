@@ -2,16 +2,16 @@
 
 # Table of Contents
 
-Session 1
+```Session 1```
 [Map Chicago's Community Areas](#session-1-map-chicagos-community-areas)
 
-Session 2
+```Session 2```
 [Map life expectancy by Chicago Community Areas](#session-2-map-life-expectancy-by-chicago-community-areas)
 
-Session 3
+```Session 3```
 [Make a Shiny App](#session-3-make-a-shiny-app)
 
-Session 4
+```Session 4```
 [Plan future sessions)](#session-4-plan-future-sessions)
 
 # Session 1 (map Chicago's Community Areas)
@@ -77,7 +77,7 @@ ggplot() +
  ```
 ![](SUHI_session1_final_map.png)
 
-[Click to return to Table of Contents](#table-of-contents)
+### Click to return to [Table of Contents](#table-of-contents)
 
 # Session 2 (map life expectancy by Chicago Community Areas)
 Session 2 builds off session 1 in that it assumes we have already added our Chicago Community Area (CCA) shapefile and installed/loaded all needed libraries (see session 1). In session 2, we will download and clean life expectancy data from the Chicago Health Atals and merge this data with our shapefile so it can be spatially visualized.
@@ -141,12 +141,12 @@ ggplot(data = Merged_Life) +
  ```
  ![](SUHI_session2_4_map.png)
  
- [Click to return to Table of Contents](#table-of-contents)
+### Click to return to [Table of Contents](#table-of-contents)
  
 # Session 3 (make a Shiny App)
 
-[Click to return to Table of Contents](#table-of-contents)
+### Click to return to [Table of Contents](#table-of-contents)
 
 # Session 4 (plan future sessions)
 
-[Click to return to Table of Contents](#table-of-contents)
+### Click to return to [Table of Contents](#table-of-contents)
