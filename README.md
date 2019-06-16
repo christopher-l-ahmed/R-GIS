@@ -144,17 +144,17 @@ ggplot(data = Merged_Life) +
 ### Click to return to [Table of Contents](#table-of-contents)
  
 # Session 3 (make a Shiny App)
-Session 3 uses what we learned in sessions 1 and 2 but deploys our maps as a hosted website.
+Session 3 uses what we learned in sessions 1 and 2 to create a ```Shiny App```. A ```Shiny App``` is a web application (aka a website) that is built using R code. In this session we will learn the basics for creating an interactive website to visually display Chicago Health Atlas data.
 
 #### Step 1
-Log-in to Rstudio Cloud and create a ```New Project```. Click on the project title; rename it ```my_shiny_app```. In the ```console``` install the shiny package and load the shiny library by running the code below in your console.
+Log-in to Rstudio Cloud [https://rstudio.cloud/](https://rstudio.cloud/) and create a ```New Project```. Click on the project title; rename it ```my_shiny_app```. In the ```console``` type the code below to install the shiny package and load the shiny library. Remeber to click run or press ```Ctrl + Enter``` to run your code.
 ```
 install.packages("shiny")
 library(shiny)
 ```
 
 #### Step 2
-To make your app (aka website) we need to set-up the ```front-end``` which is the user interface and the ```back-end``` which is the server. We will do everything in ```R```. To start, begin two new ```R Scripts``` by clicking the ```Plus``` arrow on the top left of the screen and selecting "new R script" (do this twice). Click the first script (it should be listed as "Untitiled1"); click ```Save-As``` and name the script ```ui``` for user interface. Click on the second script (named "Untitiled2") and save this one as ```server```.
+To make your app (aka website) we need to set-up the ```front-end``` which is the user interface and the ```back-end``` which is a server that works behind the scenes. Both will be done in ```R```! Start by creating two new ```R Scripts```. As a reminder, you can do this by clicking the ```Plus``` arrow on the top left of the screen and selecting "new R script" (do this twice). Click the first script (it should be listed as "Untitled1"); click ```Save-As``` and name the script ```ui``` for user interface. Click on the second script (named "Untitled2") and save this one as ```server```.
 
 ![](SUHI_session3_1_r_script.png)
 
