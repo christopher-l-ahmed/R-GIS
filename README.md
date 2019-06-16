@@ -1,7 +1,7 @@
 ![](SUHI_9session_overview.png)
 
 Session 1
-[Map Chicago's Community Areas]](#session-1-map-chicagoss-community-areas)
+[Map Chicago's Community Areas](#session-1-map-chicagos-community-areas)
 
 Session 2
 [Map life expectancy by Chicago Community Areas](#session-2-map-life-expectancy-by-chicago-community-areas)
