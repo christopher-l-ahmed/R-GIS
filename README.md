@@ -156,21 +156,9 @@ library(shiny)
 #### Step 2
 To make your app (aka website) we need to set-up the ```front-end``` which is the user interface and the ```back-end``` which is the server. We will do everything in ```R```. To start, begin two new ```R Scripts``` by clicking the ```Plus``` arrow on the top left of the screen and selecting "new R script" (do this twice). Click the first script (it should be listed as "Untitiled1"); click ```Save-As``` and name the script ```ui``` for user interface. Click on the second script (named "Untitiled2") and save this one as ```server```.
 
-![](SUHI_session1_Rstudio_new_project.png)
-![](SUHI_session1_new_script.png)
+![](SUHI_session3_1_r_script.png)
 
-#### Step 4
-R is an open source coding software with a lot of pre-built libraries of code. We can freely use these libraries but we have to install and load them first. Type the code below in your R-script, the first three lines are used to install the libraries, the next four lines of code are used to load libraries. After you copied and pasted this code, highlight the first three lines of code and click ```run``` or ```ctrl enter``` to execute the code.
-```
-install.packages("sf")
-install.packages("raster")
-install.packages("ggplot2")
 
-library(sf)
-library(sp)
-library(raster)
-library(ggplot2)
-```
 
 ### Click to return to [Table of Contents](#table-of-contents)
 
