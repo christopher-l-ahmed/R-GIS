@@ -152,8 +152,20 @@ Log-in to Rstudio Cloud [https://rstudio.cloud/](https://rstudio.cloud/) and cre
 ![](SUHI_session3_1_r_script.png)
 
 #### Step 2
-Let's run our app to see what it currently looks like by pressing ```run app```.
+Let's run our app to see what it currently looks like by pressing ```run app```. As you can seen, we have a simple website with a visualziation section and a user input section. We are going to replace both of these so the visualziation section shows a map of Chicago, and the user input section allows the user to pick from different health atlas variables.
 
+![](SUHI_session3_2_first_run_ap.png)
+
+#### Step 3
+Before we edit the code, let's understand what code exists in the ```UI``` and ```server``` scripts.
+
+```
+UI script
+
+hinyUI(fluidPage(
+```
+
+![](SUHI_session3_3_explore_first_app.png)
 
 
 the ```console``` type the code below to install the shiny package and load the shiny library. Remeber to click run or press ```Ctrl + Enter``` to run your code.
