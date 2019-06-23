@@ -147,7 +147,12 @@ ggplot(data = Merged_Life) +
 Session 3 uses what we learned in sessions 1 and 2 to create a ```Shiny App```. A ```Shiny App``` is a web application (aka a website) that is built using R code. In this session we will learn the basics for creating an interactive website to visually display Chicago Health Atlas data.
 
 #### Step 1
-Log-in to Rstudio Cloud [https://rstudio.cloud/](https://rstudio.cloud/) and create a ```New Project```. Click on the project title; rename it ```my_shiny_app```. In the ```console``` type the code below to install the shiny package and load the shiny library. Remeber to click run or press ```Ctrl + Enter``` to run your code.
+Log-in to Rstudio Cloud [https://rstudio.cloud/](https://rstudio.cloud/) and create a ```New Project```. Click on the project title; rename it ```my_shiny_app```. Like shown in the image below, use the plus-sign to create a new ```Shiny Web App```. When prompted, click yes to install an updated version of the ```shiny``` package. Name your new shiny app ```health_atlas``` and select ```Multiple File``` from the pop-up menu (see image below). This process will take a few minutes but when done, two ```r-scripts``` will have been created, one will be named ```UI``` - this is where you will write your user interface code - and the other ```server``` - this is where you will write the back end code; together these two scripts make up your interactive website.
+
+![](SUHI_session3_1_r_script.png)
+
+#### Step 3
+In the ```console``` type the code below to install the shiny package and load the shiny library. Remeber to click run or press ```Ctrl + Enter``` to run your code.
 ```
 install.packages("shiny")
 library(shiny)
