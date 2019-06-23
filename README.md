@@ -162,11 +162,55 @@ Before we edit the code, let's understand what code exists in the ```UI``` and `
 ```
 UI script
 
-hinyUI(fluidPage(
+shinyUI(fluidPage(
+
+This code creates a fluid page that has a certain number of rows and columns; it is 'fluid' because if viewed on a smaller screen (e.g. tablet) the width and heights of rows and columns will change so the same number of rows and columns will show.
 ```
 
-![](SUHI_session3_3_explore_first_app.png)
+```
+UI script
 
+titlePanel("Old Faithful Geyser Data"),
+    sidebarLayout(
+        sidebarPanel(
+            sliderInput("bins",
+                        "Number of bins:",
+                        min = 1,
+                        max = 50,
+                        value = 30)
+        ),
+
+This codes creates the user input section with a title and slider-type of input. We will change this to a drop-down menu. You will see 'input' in the server code.
+```
+
+```
+UI script
+
+mainPanel(plotOutput("distPlot")
+
+This code is tells the app what to display in the 'main panel' - which is where we saw the histogram visualization when we ran the app. You will see what this reference to "distPlot" is when we move to the server side of the code.
+```
+
+```
+Server script
+
+shinyServer(function(input, output) {
+    output$distPlot <- renderPlot({
+
+The important thing to know, is the server side of the code is built upon a function that is made up of an 'input' and an 'output. We will see how the output is created next, but know the input here is determined by the user making a selection. The curly brackets are being used to define what the output is going to be. Here, the output is called 'distPlot' which was an object refered to in the UI scropt (remember). The next part of the code is defining what distPlot is going to be, which in this case is a plot
+```
+
+```
+Server script
+
+    output$distPlot <- renderPlot({
+
+        # generate bins based on input$bins from ui.R
+        x    <- faithful[, 2]
+        bins <- seq(min(x), max(x), length.out = input$bins + 1)
+
+        # draw the histogram with the specified number of bins
+        hist(x, breaks = bins, col = 'darkgray', border = 'white')
 
 the ```console``` type the code below to install the shiny package and load the shiny library. Remeber to click run or press ```Ctrl + Enter``` to run your code.
 ```
