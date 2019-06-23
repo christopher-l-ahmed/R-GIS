@@ -151,8 +151,12 @@ Log-in to Rstudio Cloud [https://rstudio.cloud/](https://rstudio.cloud/) and cre
 
 ![](SUHI_session3_1_r_script.png)
 
-#### Step 3
-In the ```console``` type the code below to install the shiny package and load the shiny library. Remeber to click run or press ```Ctrl + Enter``` to run your code.
+#### Step 2
+Let's run our app to see what it currently looks like by pressing ```run app```.
+
+
+
+the ```console``` type the code below to install the shiny package and load the shiny library. Remeber to click run or press ```Ctrl + Enter``` to run your code.
 ```
 install.packages("shiny")
 library(shiny)
