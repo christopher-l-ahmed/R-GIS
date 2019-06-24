@@ -240,12 +240,30 @@ Now it's time to edit this code and use our own data. Let's grab our data from s
 ![](SUHI_session3_4_add_data.png)
 
 #### Step 5
-...change from slider to drop-down
+Next, let's change our UI code so instead of a slider we have a drop-down that allows users to select the two health indicator variables we are mapping from the Chicago Health Atlas. Change your UI code and then click ```run app``` to see what it looks like.
 
 ```
 #UI script
+library(shiny)
 
+# Define UI for application that draws a map
+shinyUI(fluidPage(
+
+    # Application title
+    titlePanel("Chicago Health Atlas Data"),
+
+    # Make a drop-down list for indicators
+    sidebarLayout(
+        sidebarPanel(
+            selectInput("Indicator", "Select a Health indicator", c("Life Expectancy", "Fire-Arm Homicide Rate"))
+        ),
+    
+
+        # Show map plot
+        mainPanel(plotOutput("plot2")
+    ))))
 ```
+![](SUHI_session3_5_ui.png)
 
 #### Step 6
 ....change from histogram to map
