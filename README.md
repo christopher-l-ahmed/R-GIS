@@ -164,7 +164,10 @@ UI script
 
 shinyUI(fluidPage(
 
-This code creates a fluid page that has a certain number of rows and columns; it is 'fluid' because if viewed on a smaller screen (e.g. tablet) the width and heights of rows and columns will change so the same number of rows and columns ware always visable.
+This code creates a fluid page that has a certain number of rows and columns;
+it is 'fluid' because if viewed on a smaller screen (e.g. tablet) the width and
+heights of rows and columns will change so the same number of rows and columns
+ware always visable.
 ```
 
 ```
@@ -180,7 +183,11 @@ titlePanel("Old Faithful Geyser Data"),
                         value = 30)
         ),
 
-This codes creates the user input section. The code specifies that a slider-bar will appear and that as users slide from one end of the bar to the other the values should range from 1 to 50 and that the defult slider value when the user opens the website should be 30. We will change this section to a drop-down menu where users can select different health variables.
+This codes creates the user input section. The code specifies that a slider-bar
+will appear and that as users slide from one end of the bar to the other the values
+should range from 1 to 50 and that the defult slider value when the user opens the
+website should be 30. We will change this section to a drop-down menu where users
+can select different health variables.
 ```
 
 ```
@@ -188,7 +195,9 @@ UI script
 
 mainPanel(plotOutput("distPlot")
 
-This code is tells the app what to display in the 'main panel' - which is where we saw the histogram visualization when we ran the app. Note the reference to "distPlot". We will see what this reference is when we move to the server side of the code.
+This code is tells the app what to display in the 'main panel' - which is where we
+saw the histogram visualization when we ran the app. Note the reference to "distPlot".
+We will see what this reference is when we move to the server side of the code.
 ```
 
 ```
@@ -197,7 +206,10 @@ Server script
 shinyServer(function(input, output) {
     output$distPlot <- 
 
-This code is for the backend of our data. It is based on a function that has an input (this is the user input from moving the slider) and an output. The output is then defined as an object called distPlot. Remeber in R, <- is the equal sign so the next part of the code is defining what the object distPlot should equal.
+This code is for the backend of our data. It is based on a function that has an
+input (this is the user input from moving the slider) and an output. The output 
+is then defined as an object called distPlot. Remeber in R, <- is the equal sign 
+so the next part of the code is defining what the object distPlot should equal.
 ```
 
 ```
@@ -208,7 +220,18 @@ output$distPlot <- renderPlot({
         bins <- seq(min(x), max(x), length.out = input$bins + 1)
         hist(x, breaks = bins, col = 'darkgray', border = 'white')
 
-This code specifies/creates elements for the plot. So, first we create an object called x which is going to be a data table that is equal to the second column in the faithful data table (this a built in dataset where each row is an observation of Old Faithful errupting and column 2 is the number of seconds before the last erruption). So, x is a list of all the recorded times between Old Faitful erruptions. Then, we also create another object (you can think of this as creating another list or another data table) that is called 'bins' and we are using a function to set the values in this table. The function we are using is sequence and we are feeding into the function the min and max of our x values (wait times) and then the sequence function will divide the min and max by the slider input the user selected plus 1. This givs us the number of bins that will be used to make a histogram using our data from 'x', the size of bins from 'bins', and then the colors specified.
+This code specifies/creates elements for the plot. So, first we create an object
+called x which is going to be a data table that is equal to the second column in
+the faithful data table (this a built in dataset where each row is an observation 
+of Old Faithful errupting and column 2 is the number of seconds before the last 
+erruption). So, x is a list of all the recorded times between Old Faitful erruptions.
+Then, we also create another object (you can think of this as creating another list
+or another data table) that is called 'bins' and we are using a function to set the
+values in this table. The function we are using is sequence and we are feeding into
+the function the min and max of our x values (wait times) and then the sequence 
+function will divide the min and max by the slider input the user selected plus 1.
+This givs us the number of bins that will be used to make a histogram using our data 
+from 'x', the size of bins from 'bins', and then the colors specified.
 ```
 
 
