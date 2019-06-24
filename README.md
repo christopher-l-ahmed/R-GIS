@@ -235,10 +235,8 @@ from 'x', the size of bins from 'bins', and then the colors specified.
 ```
 
 
-#### Step 2
-To make your app (aka website) we need to set-up the ```front-end``` which is the user interface and the ```back-end``` which is a server that works behind the scenes. Both will be done in ```R```! Start by creating two new ```R Scripts```. As a reminder, you can do this by clicking the ```Plus``` arrow on the top left of the screen and selecting "new R script" (do this twice). Click the first script (it should be listed as "Untitled1"); click ```Save-As``` and name the script ```ui``` for user interface. Click on the second script (named "Untitled2") and save this one as ```server```.
-
-![](SUHI_session3_1_r_script.png)
+#### Step 4
+Now it's time to edit this code and use our own data. Let's grab our data first. Like we did in session 2, we can go to the Health Altas website and download health indicator data and clean it so we have a column for community area name, number, and the health indicator. I did this again for age adjusted breast cancer mortality rate and added this to our life expectancy data. You can try to do this yourself again for practice our can use my cleaned version of this data which you can download by clicking [here.](
 
 
 
