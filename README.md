@@ -164,7 +164,7 @@ UI script
 
 shinyUI(fluidPage(
 
-This code creates a fluid page that has a certain number of rows and columns; it is 'fluid' because if viewed on a smaller screen (e.g. tablet) the width and heights of rows and columns will change so the same number of rows and columns will show.
+This code creates a fluid page that has a certain number of rows and columns; it is 'fluid' because if viewed on a smaller screen (e.g. tablet) the width and heights of rows and columns will change so the same number of rows and columns ware always visable.
 ```
 
 ```
@@ -180,7 +180,7 @@ titlePanel("Old Faithful Geyser Data"),
                         value = 30)
         ),
 
-This codes creates the user input section with a title and slider-type of input. We will change this to a drop-down menu. You will see 'input' in the server code.
+This codes creates the user input section. The code specifies that a slider-bar will appear and that as users slide from one end of the bar to the other the values should range from 1 to 50 and that the defult slider value when the user opens the website should be 30. We will change this section to a drop-down menu where users can select different health variables.
 ```
 
 ```
@@ -188,35 +188,29 @@ UI script
 
 mainPanel(plotOutput("distPlot")
 
-This code is tells the app what to display in the 'main panel' - which is where we saw the histogram visualization when we ran the app. You will see what this reference to "distPlot" is when we move to the server side of the code.
+This code is tells the app what to display in the 'main panel' - which is where we saw the histogram visualization when we ran the app. Note the reference to "distPlot". We will see what this reference is when we move to the server side of the code.
 ```
 
 ```
 Server script
 
 shinyServer(function(input, output) {
-    output$distPlot <- renderPlot({
+    output$distPlot <- 
 
-The important thing to know, is the server side of the code is built upon a function that is made up of an 'input' and an 'output. We will see how the output is created next, but know the input here is determined by the user making a selection. The curly brackets are being used to define what the output is going to be. Here, the output is called 'distPlot' which was an object refered to in the UI scropt (remember). The next part of the code is defining what distPlot is going to be, which in this case is a plot
+This code is for the backend of our data. It is based on a function that has an input (this is the user input from moving the slider) and an output. The output is then defined as an object called distPlot. Remeber in R, <- is the equal sign so the next part of the code is defining what the object distPlot should equal.
 ```
 
 ```
 Server script
 
-    output$distPlot <- renderPlot({
-
-        # generate bins based on input$bins from ui.R
+output$distPlot <- renderPlot({
         x    <- faithful[, 2]
         bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
         hist(x, breaks = bins, col = 'darkgray', border = 'white')
 
-the ```console``` type the code below to install the shiny package and load the shiny library. Remeber to click run or press ```Ctrl + Enter``` to run your code.
+This code specifies/creates elements for the plot. So, first we create an object called x which is going to be a data table that is equal to the second column in the faithful data table (this a built in dataset where each row is an observation of Old Faithful errupting and column 2 is the number of seconds before the last erruption). So, x is a list of all the recorded times between Old Faitful erruptions. Then, we also create another object (you can think of this as creating another list or another data table) that is called 'bins' and we are using a function to set the values in this table. The function we are using is sequence and we are feeding into the function the min and max of our x values (wait times) and then the sequence function will divide the min and max by the slider input the user selected plus 1. This givs us the number of bins that will be used to make a histogram using our data from 'x', the size of bins from 'bins', and then the colors specified.
 ```
-install.packages("shiny")
-library(shiny)
-```
+
 
 #### Step 2
 To make your app (aka website) we need to set-up the ```front-end``` which is the user interface and the ```back-end``` which is a server that works behind the scenes. Both will be done in ```R```! Start by creating two new ```R Scripts```. As a reminder, you can do this by clicking the ```Plus``` arrow on the top left of the screen and selecting "new R script" (do this twice). Click the first script (it should be listed as "Untitled1"); click ```Save-As``` and name the script ```ui``` for user interface. Click on the second script (named "Untitled2") and save this one as ```server```.
