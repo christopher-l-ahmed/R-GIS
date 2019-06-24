@@ -9,10 +9,10 @@
 [Map life expectancy by Chicago Community Areas](#session-2-map-life-expectancy-by-chicago-community-areas)
 
 ```Session 3```
-[Make a Shiny App](#session-3-make-a-shiny-app)
+[Make a Shiny App Part 1](#session-3-make-a-shiny-app-part-1)
 
 ```Session 4```
-[Plan future sessions)](#session-4-plan-future-sessions)
+[Make a Shiny App Part 2](#session-4-make-a-shiny-app-part-2)
 
 # Session 1 (map Chicago's Community Areas)
 
@@ -143,7 +143,7 @@ ggplot(data = Merged_Life) +
  
 ### Click to return to [Table of Contents](#table-of-contents)
  
-# Session 3 (make a Shiny App)
+# Session 3 (make a Shiny App Part 1)
 Session 3 uses what we learned in sessions 1 and 2 to create a ```Shiny App```. A ```Shiny App``` is a web application (aka a website) that is built using R code. In this session we will learn the basics for creating an interactive website to visually display Chicago Health Atlas data.
 
 #### Step 1
@@ -235,12 +235,12 @@ from 'x', the size of bins from 'bins', and then the colors specified.
 ```
 
 #### Step 4
-Now it's time to edit this code and use our own data. Let's grab our data from session 2 (2017 life expectancy by Chicago Community Area). Like we did in session 2, we can go to the Health Altas website and download health indicator data and clean it so we have a column for community area name, number, and the health indicator. I did this again for 2013-2017 age-adjusted fire-arm related homicide rates by community area and added this to our life expectancy data. You can try to do this yourself again for practice our can use my cleaned version of this data which you can download by clicking [here.](https://drive.google.com/file/d/1bwlPpl9r9lbrILUaRtC3mChZKlZt_ZmI/view?usp=sharing). Once you download this data, add it to your R studio folder.
+Before we edit this code to make our map app let's grab our data from session 1 (the shapefile of Chicago Community Areas) and from session 2 (2017 life expectancy by Chicago Community Area). In addition to using life expectancy, let's add one more variable of data to this file from the Chicago Health Atlas. I am going to add 2013-2017 age-adjusted fire-arm related homicide rates by community area which I downloaded and cleaned from the Chicago Health Altas just like we did in session 2. You can do this your self or download the cleaned and combined data by clicking [here.](https://drive.google.com/file/d/1bwlPpl9r9lbrILUaRtC3mChZKlZt_ZmI/view?usp=sharing). Once you download this data, add it to your R studio folder. You can also download the zipped (keep it zipped) shapefile and from session 1 by clicking [here.](https://drive.google.com/file/d/1DqeBQlf6E0Bi4rTO1e_ZSxyuprssHhV5/view?usp=sharing). Upload these files.
 
 ![](SUHI_session3_4_add_data.png)
 
 #### Step 5
-Next, let's change our UI code so instead of a slider we have a drop-down that allows users to select the two health indicator variables we are mapping from the Chicago Health Atlas. Change your UI code and then click ```run app``` to see what it looks like.
+Now we can start editing our code. Let's change our UI code first so instead of a slider we have a drop-down that allows users to select the two health indicator variables we are mapping from the Chicago Health Atlas. Change your UI code and then click ```run app``` to see what it looks like.
 
 ```
 #UI script
@@ -265,19 +265,11 @@ shinyUI(fluidPage(
 ```
 ![](SUHI_session3_5_ui.png)
 
-#### Step 6
-....change from histogram to map
-
-```
-#Server script
-
-```
-
-#### Step 7
-...click to run your app. The final product should look like this:
+#### To be continued...
+In our next session we will edit the server side to create our maps (cliff hanger).
 
 ### Click to return to [Table of Contents](#table-of-contents)
 
-# Session 4 (plan future sessions)
+# Session 4 (make a Shiny App Part 2)
 
 ### Click to return to [Table of Contents](#table-of-contents)
