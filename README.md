@@ -234,11 +234,29 @@ This givs us the number of bins that will be used to make a histogram using our 
 from 'x', the size of bins from 'bins', and then the colors specified.
 ```
 
-
 #### Step 4
 Now it's time to edit this code and use our own data. Let's grab our data from session 2 (2017 life expectancy by Chicago Community Area). Like we did in session 2, we can go to the Health Altas website and download health indicator data and clean it so we have a column for community area name, number, and the health indicator. I did this again for 2013-2017 age-adjusted fire-arm related homicide rates by community area and added this to our life expectancy data. You can try to do this yourself again for practice our can use my cleaned version of this data which you can download by clicking [here.](https://drive.google.com/file/d/1bwlPpl9r9lbrILUaRtC3mChZKlZt_ZmI/view?usp=sharing). Once you download this data, add it to your R studio folder.
 
 ![](SUHI_session3_4_add_data.png)
+
+#### Step 5
+...change from slider to drop-down
+
+```
+#UI script
+
+```
+
+#### Step 6
+....change from histogram to map
+
+```
+#Server script
+
+```
+
+#### Step 7
+...click to run your app. The final product should look like this:
 
 ### Click to return to [Table of Contents](#table-of-contents)
 
