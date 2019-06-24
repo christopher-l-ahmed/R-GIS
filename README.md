@@ -152,12 +152,12 @@ Log-in to Rstudio Cloud [https://rstudio.cloud/](https://rstudio.cloud/) and cre
 ![](SUHI_session3_1_r_script.png)
 
 #### Step 2
-Let's run our app to see what it currently looks like by pressing ```run app```. As you can seen, we have a simple website with a visualziation section and a user input section. We are going to replace both of these so the visualziation section shows a map of Chicago, and the user input section allows the user to pick from different health atlas variables.
+Let's run our app to see what it currently looks like by pressing ```run app```. As you can see, we have a simple website with a visualziation section and a user input section. We are going to replace both of these so on the left users can select from a list of health indicators and on the right a map of community areas will be displayed.
 
 ![](SUHI_session3_2_first_run_ap.png)
 
 #### Step 3
-Before we edit the code, let's understand what code exists in the ```UI``` and ```server``` scripts.
+Before we edit the code, let's first understand what this code does in the ```UI``` and ```server``` scripts.
 
 ```
 UI script
@@ -266,7 +266,7 @@ shinyUI(fluidPage(
 ![](SUHI_session3_5_ui.png)
 
 #### To be continued...
-In our next session we will edit the server side to create our maps (cliff hanger).
+In our next session we will edit the server side to create our maps (what a cliff hanger!).
 
 ### Click to return to [Table of Contents](#table-of-contents)
 
